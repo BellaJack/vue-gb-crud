@@ -2,7 +2,7 @@
   <div class="col-md-4">
     <div class="addUser">
       <header>
-        <h3>Add new user</h3>
+        <h2>Add new user</h2>
       </header>
       <div class="addUser__form">
         <form
@@ -27,7 +27,8 @@
               name="addUserLastName"
               type="text"
               placeholder="Insert Last Name"
-              v-model="newUser.lastName"/>
+              v-model="newUser.lastName"
+              required />
             <span class="form-text small">Ex: Malfoy</span>
           </div>
           <div class="form-group">
@@ -38,7 +39,8 @@
               name="addUserEmail"
               type="email"
               placeholder="Insert Email"
-              v-model="newUser.email"/>
+              v-model="newUser.email"
+              required />
             <span class="form-text small">Ex: d.malfoy@slytherin.com</span>
           </div>
           <div class="form-group">
@@ -50,18 +52,18 @@
               type="tel"
               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               placeholder="Insert Phone"
-              v-model="newUser.phone"/>
-            <span class="form-text small">Ex: 123-456-7890</span>
+              v-model="newUser.phone"
+              required />
+            <span class="form-text small">Format: 123-456-7890</span>
           </div>
           <div class="form-group">
             <input
               type="submit"
               value="Add User"
-              class="btn btn-primary" /> 
-            <input
+              class="btn btn-success btn-sm" /> <input
               type="reset"
-              value="Clean"
-              class="btn btn-light" />
+              value="Reset"
+              class="btn btn-secondary btn-sm" />
           </div>
         </form>
       </div>

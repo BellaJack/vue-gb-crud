@@ -39,15 +39,7 @@ const router = new Router({
     {
       path: '/edit/:id',
       name: 'edit',
-      component: Edit
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      component: Edit,
       meta: {
         requiresAuth: true
       }
@@ -60,7 +52,7 @@ router.beforeEach((to, from, next) => {
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
 
   if(requiresAuth && !currentUser) next('login');
-  //else if(!requiresAuth && currentUser) next('home');
+  else if(!requiresAuth && currentUser) next('home');
   else next();
 });
 

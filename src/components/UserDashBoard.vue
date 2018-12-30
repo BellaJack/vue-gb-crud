@@ -2,20 +2,23 @@
   <div class="col-md-8">
     <div class="addUser">
       <header>
-        <h3>Users</h3>
+        <h2>Users</h2>
       </header>
-      <div v-if="users.length" class="row">
-        <div class="card col-sm-6" v-for="user in users" :key="user.id">
-          <div class="card-body">
-            <h5 class="card-title">{{user.firstName}} {{user.lastName}} </h5>
-            <p class="card-text">
-              Email: {{user.Email}}<br/>
-              Phone: {{user.Phone}}
-            </p>
-            <router-link :to="{ name: 'edit', params: {id: user.id} }" class="btn btn-primary btn-sm">
-              Edit
-            </router-link>
-            <button @click="removeUser(user.id)" type="button" class="btn btn-danger btn-sm">Delete</button>
+      <div v-if="users.length">
+        <div class="card text-dark" v-for="user in users" :key="user.id">
+          <div class="card-body row align-items-center">
+            <div class="col-sm-8">
+              <p class="card-title"><strong>{{user.firstName}} {{user.lastName}}</strong></p>
+              <p class="card-text small">
+                Email: {{user.Email}}<br/>
+                Phone: {{user.Phone}}
+              </p>
+            </div>
+            <div class="col-sm-4 text-right">
+              <router-link :to="{ name: 'edit', params: {id: user.id} }" class="btn btn-warning btn-sm">
+                Edit
+              </router-link>  <button @click="removeUser(user.id)" type="button" class="btn btn-danger btn-sm">Delete</button>
+            </div>
           </div>
         </div>
       </div>
@@ -53,3 +56,13 @@
     }
   }
 </script>
+<style>
+  .form-control,
+  .card{
+    border: 1px solid #111417;
+  }
+  .card{
+    margin-bottom: 1em;
+  }
+</style>
+

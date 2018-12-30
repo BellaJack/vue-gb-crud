@@ -5,7 +5,7 @@
         <form
           class="row"
           @submit.prevent="updateUser"
-          @reset.prevent="cleanForm">
+          @reset.prevent="backToDashboard">
           <div class="form-group col-sm-6">
             <label for="editUserFirstName">First Name:</label>
             <input
@@ -51,11 +51,11 @@
             <input
               type="submit"
               value="Confirm"
-              class="btn btn-primary" /> 
+              class="btn btn-success" /> 
             <input
               type="reset"
-              value="Clean"
-              class="btn btn-light" />
+              value="Cancel"
+              class="btn btn-secondary" />
           </div>
         </form>
       </div>
@@ -99,18 +99,15 @@
         }).then(
           (user) => {
             console.log('User edited');
-            this.$router.go(-1);
+            this.backToDashboard();
           },
           (err) => {
             console.log("Ops... " + err.message);
           }
         );
       },
-      cleanForm(){
-        this.editUser.firstName = '';
-        this.editUser.lastName = '';
-        this.editUser.email = '';
-        this.editUser.phone = '';
+      backToDashboard(){
+        this.$router.go(-1);
       }
     }
   }

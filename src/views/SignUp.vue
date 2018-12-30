@@ -1,24 +1,34 @@
 <template>
+<div class="container">
   <div class="signUp">
     <h1>Sign Up</h1>
     <p>Let's create an account</p>
-    <div class="signUp_form">
-      <label for="signUpEmail">Email:</label>
-      <input
-        id="signUpEmail" 
-        type="text" 
-        placeholder="Insert your email" 
-        v-model="email" />
-      <label for="signUpPassword">Password:</label>
-      <input 
-        id="signUpPassword" 
-        type="password" 
-        placeholder="Insert your password" 
-        v-model="password" />
-      <button @click="signUp">Sign Up</button>
-      <p><router-link to="/login">Back to Login!</router-link>!</p>
+    <div class="signUp_form row">
+      <div class="form-group col-12">
+        <label for="signUpEmail">Email:</label>
+        <input
+          id="signUpEmail" 
+          class="form-control"
+          type="text" 
+          placeholder="Insert your email" 
+          v-model="email" />
+      </div>
+      <div class="form-group col-12">
+        <label for="signUpPassword">Password:</label>
+        <input 
+          id="signUpPassword" 
+          class="form-control"
+          type="password" 
+          placeholder="Insert your password" 
+          v-model="password" />
+      </div>
+      <div class="form-group col-12">
+        <button @click="signUp" class="btn btn-primary btn-block">Sign Up</button>
+        <p class="small text-center">Back to <router-link to="/login">Login!</router-link></p>
+      </div>
     </div>
   </div>
+</div>
 </template>
 <script>
   const fb = require('../config/firebaseConf.js');
@@ -44,6 +54,13 @@
     }
   }
 </script>
-<style>
-
+<style scoped>
+  .signUp{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 375px;
+  }
 </style>

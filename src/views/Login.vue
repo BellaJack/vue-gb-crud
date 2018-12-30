@@ -1,28 +1,35 @@
 <template>
-  <div class="gb-wrap">
-    <div class="login">
+  <div class="login">
+    <div class="container">
       <h1>Login</h1>
-      <div class="login_form">
-        <label for="loginEmail">Email:</label>
-        <input
-          id="loginEmail"
-          type="text"
-          placeholder="Insert your email" 
-          v-model="email" />
-        <label for="loginPassword">Password:</label>
-        <input
-          id="loginPassword"
-          type="password"
-          placeholder="Insert your password"
-          v-model="password" />
-        <button @click="login">Login</button>
-        <p>You don't have an account? You can <router-link to="/sign-up">create one</router-link>!</p>
+      <div class="login_form row">
+        <div class="form-group col-12">
+          <label for="loginEmail">Email:</label>
+          <input
+            id="loginEmail"
+            class="form-control"
+            type="text"
+            placeholder="Insert your email" 
+            v-model="email" />
+        </div>
+        <div class="form-group col-12">
+          <label for="loginPassword">Password:</label>
+          <input
+            id="loginPassword"
+            class="form-control"
+            type="password"
+            placeholder="Insert your password"
+            v-model="password" />
+        </div>
+        <div class="form-group col-12 text-center">
+          <button @click="login" class="btn btn-primary btn-block">Login</button>
+          <span class="small">You don't have an account? You can <router-link to="/sign-up">create one</router-link>!</span>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-  //import firebase from "firebase";
   const fb = require('../config/firebaseConf.js');
   export default {
     name: 'login',
@@ -47,8 +54,19 @@
   }
 </script>
 <style scoped>
-  label,
-  input{
-    display: block;
+  button{
+    margin-top: 1em;
+  }
+  .small{
+    margin-top: .5em;
+  }
+  .login{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 375px;
   }
 </style>
+
