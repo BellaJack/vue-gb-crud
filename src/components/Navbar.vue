@@ -36,9 +36,16 @@
   }
 </script>
 <style scoped>
+  .project-logo h1{
+    font-size: 1em;
+    margin: 0 20px 0 0;
+    text-transform: uppercase;
+  }
   #nav{
+    align-items: center;
     display: flex;
     flex-flow: row nowrap;
+    line-height: 1;
     margin: 1em 0 2em;
   }
   .nav-item.nav-link.router-link-active{
