@@ -1,7 +1,8 @@
 <template>
   <div class="login">
     <div class="container">
-      <h1>Login</h1>
+      <app-logo></app-logo>
+      <h2>Login</h2>
       <div class="login_form row">
         <div class="form-group col-12">
           <label for="loginEmail">Email:</label>
@@ -31,6 +32,7 @@
 </template>
 <script>
   const fb = require('../config/firebaseConf.js');
+  import Logo from '@/components/Logo.vue'
   export default {
     name: 'login',
     data() {
@@ -50,6 +52,9 @@
           }
         );
       }
+    },
+    components: {
+      'app-logo': Logo
     }
   }
 </script>
@@ -67,6 +72,9 @@
     justify-content: center;
     margin: 0 auto;
     max-width: 375px;
+  }
+  h2{
+    margin-top: 1em;
   }
 </style>
 

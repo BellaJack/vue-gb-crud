@@ -1,9 +1,7 @@
 <template>
   <div class="container">
     <div id="nav">
-      <header class="project-logo">
-        <h1>GB Vue Crud Demo</h1>
-      </header>
+      <app-logo></app-logo>
       <nav class="navbar navbar-expand navbar-dark bg-dark">
         <div class="container">
           <div class="collapse navbar-collapse row" id="navbarNavAltMarkup">
@@ -19,9 +17,11 @@
 </template>
 <script>
   const fb = require('../config/firebaseConf.js');
+  import Logo from '@/components/Logo.vue'
   export default {
     components:{
-      name: 'addNewUser'
+      name: 'addNewUser',
+      'app-logo': Logo
     },
     data(){
       return{}
@@ -36,11 +36,6 @@
   }
 </script>
 <style scoped>
-  .project-logo h1{
-    font-size: 1em;
-    margin: 0 20px 0 0;
-    text-transform: uppercase;
-  }
   #nav{
     align-items: center;
     display: flex;
@@ -50,5 +45,6 @@
   }
   .nav-item.nav-link.router-link-active{
     color: #fff;
+    border-bottom: 3px solid #17a2b8;
   }
 </style>
