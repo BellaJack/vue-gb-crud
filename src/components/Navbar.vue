@@ -1,5 +1,9 @@
 <template>
-  <div id="nav">
+  <div class="container">
+    <div id="nav">
+      <header class="project-logo">
+        <h1>GB Vue Crud Demo</h1>
+      </header>
       <nav class="navbar navbar-expand navbar-dark bg-dark">
         <div class="container">
           <div class="collapse navbar-collapse row" id="navbarNavAltMarkup">
@@ -11,6 +15,7 @@
         </div>
       </nav> 
     </div>
+  </div>
 </template>
 <script>
   const fb = require('../config/firebaseConf.js');
@@ -31,6 +36,11 @@
   }
 </script>
 <style scoped>
+  #nav{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 1em 0 2em;
+  }
   .nav-item.nav-link.router-link-active{
     color: #fff;
   }

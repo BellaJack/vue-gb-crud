@@ -2,7 +2,7 @@
   <div class="home">
     <app-navbar></app-navbar>
     <div class="container">
-      <h1>Dashboard</h1>
+      <h2>Dashboard</h2>
       <div class="row">
         <app-adduser></app-adduser>
         <app-userdashboard></app-userdashboard>

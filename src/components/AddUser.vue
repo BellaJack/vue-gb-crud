@@ -1,8 +1,8 @@
 <template>
   <div class="col-md-4">
-    <div class="addUser">
+    <section class="addUser">
       <header>
-        <h2>Add new user</h2>
+        <h3>Add new user</h3>
       </header>
       <div class="addUser__form">
         <form
@@ -60,14 +60,15 @@
             <input
               type="submit"
               value="Add User"
-              class="btn btn-success btn-sm" /> <input
+              class="btn btn-success btn-sm" />
+            <input
               type="reset"
               value="Reset"
               class="btn btn-secondary btn-sm" />
           </div>
         </form>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 

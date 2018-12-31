@@ -1,8 +1,8 @@
 <template>
   <div class="col-md-8">
-    <div class="addUser">
+    <section class="usersList">
       <header>
-        <h2>Users</h2>
+        <h3>Users</h3>
       </header>
       <div v-if="users.length">
         <div class="card text-dark" v-for="user in users" :key="user.id">
@@ -25,7 +25,7 @@
       <div v-else>
         <p class="no-results">There are currently no users</p>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 <script>

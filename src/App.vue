@@ -4,7 +4,7 @@
   </div>
 </template>
 <style>
-  h1{
-    margin: 1em 0;
+  .btn:not(.btn-block){
+    margin-right: 1ch;
   }
 </style>
