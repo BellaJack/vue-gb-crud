@@ -30,6 +30,9 @@ npm run build
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+## To start
+Sing up with email and password (you can use a fake email address), you will be redirected to the dashboard, have fun!
+
 ## Built With
 
 * [Vue Js](https://vuejs.org/) - Javascript framework used
