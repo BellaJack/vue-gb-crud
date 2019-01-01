@@ -1,4 +1,4 @@
-# GB Vue CRUD
+# Vue GB CRUD
 
 A simple CRUD application developed with Vue Js and Firebase.
 
