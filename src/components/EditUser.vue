@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="editUser">
-      <div class="editUser__form">
+
+      <div class="editUser__form" v-if="isLoaded">
         <form
           class="row"
           @submit.prevent="updateUser"
@@ -51,13 +52,16 @@
             <input
               type="submit"
               value="Confirm"
-              class="btn btn-success" /> 
+              class="btn btn-success"/> 
             <input
               type="reset"
               value="Cancel"
               class="btn btn-secondary" />
           </div>
         </form>
+      </div>
+      <div v-else>
+        <p class="no-results">Wait a moment...</p>
       </div>
     </div>
   </div>
@@ -76,7 +80,8 @@
           lastName: '',
           email: '',
           phone: ''
-        }
+        },
+        isLoaded: false
       }
     },
     created(){
@@ -85,6 +90,7 @@
         this.editUser.lastName = res.data().lastName;
         this.editUser.email = res.data().Email;
         this.editUser.phone = res.data().Phone;
+        this.isLoaded = true;
       }).catch(err => {
         console.log(err)
       })
