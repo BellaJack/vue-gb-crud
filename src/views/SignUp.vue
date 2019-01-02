@@ -24,7 +24,7 @@
             v-model="password" />
         </div>
         <div class="form-group col-12">
-          <button @click="signUp" class="btn btn-primary btn-block">Sign Up</button>
+          <button @click="signUp" @keyup.enter="signUp" class="btn btn-primary btn-block">Sign Up</button>
           <p class="small text-center">Back to <router-link to="/login">Login!</router-link></p>
         </div>
       </div>
