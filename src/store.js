@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-const fb = require('./config/firebaseConf.js')
+import Vue from 'vue';
+import Vuex from 'vuex';
+const fb = require('./config/firebaseConf.js');
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 fb.usersCollection.orderBy('lastName').onSnapshot(querySnapshot => {
   let usersArray = []
@@ -12,7 +12,7 @@ fb.usersCollection.orderBy('lastName').onSnapshot(querySnapshot => {
     usersArray.push(user)
   })
   store.commit('setUsers', usersArray)
-})
+});
 
 
 export const store = new Vuex.Store({
@@ -33,4 +33,4 @@ export const store = new Vuex.Store({
       }
     }
   }
-})
+});
