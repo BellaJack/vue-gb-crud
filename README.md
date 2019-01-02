@@ -31,7 +31,8 @@ npm run build
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## To start
-Sing up with email and password (you can use a fake email address), you will be redirected to the dashboard, have fun!
+* Sing up with email and password (you can use a fake email address) or login with: username test@test.com, password: p4ssw0rd!;
+* You will be redirected to the dashboard, have fun!
 
 ## Built With
 
