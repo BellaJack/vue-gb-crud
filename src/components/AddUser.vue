@@ -9,7 +9,7 @@
           @submit.prevent="addNewUser"
           @reset.prevent="cleanForm">
           <div class="form-group">
-            <label for="addUserFirstName">First Name:</label>
+            <label for="addUserFirstName">First Name</label>
             <input
               class="form-control"
               id="addUserFirstName"
@@ -20,7 +20,7 @@
             <span class="form-text small">Ex: Draco</span>
           </div>
           <div class="form-group">
-            <label for="addUserLastName">Last Name:</label>
+            <label for="addUserLastName">Last Name</label>
             <input
               class="form-control"
               id="addUserLastName"
@@ -32,7 +32,7 @@
             <span class="form-text small">Ex: Malfoy</span>
           </div>
           <div class="form-group">
-            <label for="addUserEmail">Email:</label>
+            <label for="addUserEmail">Email</label>
             <input
               class="form-control"
               id="addUserEmail"
@@ -44,7 +44,7 @@
             <span class="form-text small">Ex: d.malfoy@slytherin.com</span>
           </div>
           <div class="form-group">
-            <label id="addUserPhone">Phone:</label>
+            <label id="addUserPhone">Phone</label>
             <input
               class="form-control"
               id="addUserPhone"
@@ -114,3 +114,10 @@
     }
   }
 </script>
+<style scoped>
+  label::after{
+    content: '*';
+    margin-left: 4px; 
+  }
+</style>
+
