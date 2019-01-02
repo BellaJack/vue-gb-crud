@@ -14,9 +14,6 @@
 </template>
 <script>
   export default {
-    components:{
-      name: 'logo'
-    },
     data(){
       return{}
     }

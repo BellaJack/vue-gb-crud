@@ -20,7 +20,6 @@
   import Logo from '@/components/Logo.vue'
   export default {
     components:{
-      name: 'addNewUser',
       'app-logo': Logo
     },
     data(){

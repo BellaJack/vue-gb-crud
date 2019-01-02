@@ -32,9 +32,6 @@
   import { mapState } from 'vuex'
   const fb = require('../config/firebaseConf.js');
   export default{
-    components:{
-      name: 'usersDashBoard'
-    },
     data(){
       return{
         user:{
@@ -47,11 +44,7 @@
     },
     methods:{
       removeUser(id){
-        fb.usersCollection.doc(id).delete().then(function() {
-          console.log("Document successfully deleted!");
-        }).catch(function(error) {
-          console.error("Error removing document: ", error);
-        });
+        fb.usersCollection.doc(id).delete();
       }
     }
   }

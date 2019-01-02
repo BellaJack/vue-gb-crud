@@ -75,9 +75,6 @@
 <script>
   const fb = require('../config/firebaseConf.js');
   export default{
-    components:{
-      name: 'addNewUser'
-    },
     data(){
       return{
         newUser:{
@@ -96,12 +93,8 @@
           Email: this.newUser.email,
           Phone: this.newUser.phone
         }).then(
-          (user) => {
-            console.log('User added');
+          () => {
             this.cleanForm();
-          },
-          (err) => {
-            console.log("Ops... " + err.message);
           }
         );
       },

@@ -70,9 +70,6 @@
 <script>
   const fb = require('../config/firebaseConf.js');
   export default{
-    components:{
-      name: 'editUser'
-    },
     data(){
       return{
         editUser:{
@@ -91,9 +88,7 @@
         this.editUser.email = res.data().Email;
         this.editUser.phone = res.data().Phone;
         this.isLoaded = true;
-      }).catch(err => {
-        console.log(err)
-      })
+      });
     },
     methods:{
       updateUser(){
@@ -103,12 +98,8 @@
           Email: this.editUser.email,
           Phone: this.editUser.phone
         }).then(
-          (user) => {
-            console.log('User edited');
+          () => {
             this.backToDashboard();
-          },
-          (err) => {
-            console.log("Ops... " + err.message);
           }
         );
       },
