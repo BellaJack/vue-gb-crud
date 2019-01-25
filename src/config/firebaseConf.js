@@ -2,12 +2,12 @@ import firebase from 'firebase'
 import 'firebase/firestore'
 
 const config = {
-  apiKey: "AIzaSyCEtUh1iaDTNQBVySPSmbGZUKExtTORrQY",
-  authDomain: "vue-gb-crud.firebaseapp.com",
-  databaseURL: "https://vue-gb-crud.firebaseio.com",
-  projectId: "vue-gb-crud",
-  storageBucket: "vue-gb-crud.appspot.com",
-  messagingSenderId: "178577413075"
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT_URL.firebaseapp.com",
+  databaseURL: "https://YOUR_PROJECT_URL.firebaseio.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_URL.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID"
 };
 
 firebase.initializeApp(config)
